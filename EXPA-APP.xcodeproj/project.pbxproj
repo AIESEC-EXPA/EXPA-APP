@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B68EA7D1A52FFE3003F3715 /* EXPA-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPA-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B68EA7D1A52FFE3003F3715 /* EXPA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EXPA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B68EA811A52FFE3003F3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B68EA821A52FFE3003F3715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B68EA841A52FFE3003F3715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		3B68EA7E1A52FFE3003F3715 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B68EA7D1A52FFE3003F3715 /* EXPA-APP.app */,
+				3B68EA7D1A52FFE3003F3715 /* EXPA.app */,
 				3B68EA921A52FFE3003F3715 /* EXPA-APPTests.xctest */,
 			);
 			name = Products;
@@ -129,7 +129,7 @@
 			);
 			name = "EXPA-APP";
 			productName = "EXPA-APP";
-			productReference = 3B68EA7D1A52FFE3003F3715 /* EXPA-APP.app */;
+			productReference = 3B68EA7D1A52FFE3003F3715 /* EXPA.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3B68EA911A52FFE3003F3715 /* EXPA-APPTests */ = {
@@ -338,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "EXPA-APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EXPA;
 			};
 			name = Debug;
 		};
@@ -348,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "EXPA-APP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EXPA;
 			};
 			name = Release;
 		};
@@ -405,6 +405,7 @@
 				3B68EA9E1A52FFE3003F3715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B68EA9F1A52FFE3003F3715 /* Build configuration list for PBXNativeTarget "EXPA-APPTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				3B68EAA11A52FFE3003F3715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
