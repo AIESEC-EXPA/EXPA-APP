@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B68EA7C1A52FFE3003F3715"
-               BuildableName = "EXPA-APP.app"
+               BuildableName = "EXPA.app"
                BlueprintName = "EXPA-APP"
                ReferencedContainer = "container:EXPA-APP.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B68EA7C1A52FFE3003F3715"
-            BuildableName = "EXPA-APP.app"
+            BuildableName = "EXPA.app"
             BlueprintName = "EXPA-APP"
             ReferencedContainer = "container:EXPA-APP.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B68EA7C1A52FFE3003F3715"
-            BuildableName = "EXPA-APP.app"
+            BuildableName = "EXPA.app"
             BlueprintName = "EXPA-APP"
             ReferencedContainer = "container:EXPA-APP.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B68EA7C1A52FFE3003F3715"
-            BuildableName = "EXPA-APP.app"
+            BuildableName = "EXPA.app"
             BlueprintName = "EXPA-APP"
             ReferencedContainer = "container:EXPA-APP.xcodeproj">
          </BuildableReference>
