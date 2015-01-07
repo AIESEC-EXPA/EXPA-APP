@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1C88031A5D1C0D00EAA492 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */; };
+		3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88071A5D321B00EAA492 /* todoitem.swift */; };
 		3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA821A52FFE3003F3715 /* AppDelegate.swift */; };
 		3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA841A52FFE3003F3715 /* ViewController.swift */; };
 		3B68EA881A52FFE3003F3715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA861A52FFE3003F3715 /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		3B1C88071A5D321B00EAA492 /* todoitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todoitem.swift; sourceTree = "<group>"; };
 		3B68EA7D1A52FFE3003F3715 /* EXPA-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPA-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B68EA811A52FFE3003F3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B68EA821A52FFE3003F3715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */,
 				3B68EA801A52FFE3003F3715 /* Supporting Files */,
 				3BBCCB801A5ABF6D00D8BA3D /* test.swift */,
+				3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */,
+				3B1C88071A5D321B00EAA492 /* todoitem.swift */,
 			);
 			path = "EXPA-APP";
 			sourceTree = "<group>";
@@ -325,8 +331,10 @@
 			files = (
 				3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */,
 				3BBCCB811A5ABF6D00D8BA3D /* test.swift in Sources */,
+				3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */,
 				3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */,
 				3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */,
+				3B1C88031A5D1C0D00EAA492 /* CustomTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

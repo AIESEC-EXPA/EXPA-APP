@@ -13,6 +13,7 @@ import SwiftHTTP
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textview1: UITextView!
     @IBOutlet weak var Label1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +21,14 @@ class ViewController: UIViewController {
         self.Label1.text = "bbbbbbbc"
         var request = HTTPTask()
         //request.responseSerializer = JSONResponseSerializer()
-        request.GET("https://gis-api.aiesec.org:443/v1/current_person.json", parameters: ["access_token":"431b9c8e5d9fb6a2e0470f9010111aa7f356f81ad5dbd71e3904574b76339ecd"],
+        request.GET("https://gis-api.aiesec.org:443/v1/current_person.json", parameters: ["access_token":"227e41b622d9418c695000680c7c343d1e33403bfe388792692cc25cdec7d2fc"],
             success: {(response: HTTPResponse) in
                 if let data = response.responseObject as? NSData {
                     let json = JSON(data: data)
                     println(json["person"]["email"])
                     dispatch_async(dispatch_get_main_queue(), {
                         self.Label1.text = json["person"]["email"].stringValue
+                        self.textview1.text = NSString(data: data, encoding: NSUTF8StringEncoding)
                     })
                 }
             },
