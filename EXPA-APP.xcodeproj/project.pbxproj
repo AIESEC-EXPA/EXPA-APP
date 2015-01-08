@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3B1C88031A5D1C0D00EAA492 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */; };
 		3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88071A5D321B00EAA492 /* todoitem.swift */; };
+		3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */; };
+		3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */; };
+		3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */; };
+		3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753E31A5EA95500C38BBA /* RootViewController.swift */; };
+		3B5753ED1A5EC88C00C38BBA /* SideMenuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5753EC1A5EC88C00C38BBA /* SideMenuBackground.jpg */; };
 		3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA821A52FFE3003F3715 /* AppDelegate.swift */; };
 		3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA841A52FFE3003F3715 /* ViewController.swift */; };
 		3B68EA881A52FFE3003F3715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA861A52FFE3003F3715 /* Main.storyboard */; };
@@ -83,6 +88,15 @@
 /* Begin PBXFileReference section */
 		3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		3B1C88071A5D321B00EAA492 /* todoitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todoitem.swift; sourceTree = "<group>"; };
+		3B5753D71A5EA8F200C38BBA /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		3B5753D91A5EA8F200C38BBA /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		3B5753DB1A5EA8F200C38BBA /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		3B5753E31A5EA95500C38BBA /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		3B5753E51A5EA97D00C38BBA /* Objective-C-Swift-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Swift-Bridge.h"; sourceTree = "<group>"; };
+		3B5753EC1A5EC88C00C38BBA /* SideMenuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SideMenuBackground.jpg; sourceTree = "<group>"; };
 		3B68EA7D1A52FFE3003F3715 /* EXPA-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPA-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B68EA811A52FFE3003F3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B68EA821A52FFE3003F3715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +109,7 @@
 		3B68EA981A52FFE3003F3715 /* EXPA_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPA_APPTests.swift; sourceTree = "<group>"; };
 		3BBCCB801A5ABF6D00D8BA3D /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../Downloads/SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
-		3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "EXPA-APP/SwiftyJSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +131,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5753D61A5EA8F200C38BBA /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3B5753D71A5EA8F200C38BBA /* RECommonFunctions.h */,
+				3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */,
+				3B5753D91A5EA8F200C38BBA /* RESideMenu.h */,
+				3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */,
+				3B5753DB1A5EA8F200C38BBA /* UIViewController+RESideMenu.h */,
+				3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
 		3B68EA741A52FFE3003F3715 = {
 			isa = PBXGroup;
 			children = (
+				3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */,
+				3B5753D61A5EA8F200C38BBA /* RESideMenu */,
 				3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */,
 				3B68EA7F1A52FFE3003F3715 /* EXPA-APP */,
 				3B68EA951A52FFE3003F3715 /* EXPA-APPTests */,
@@ -139,9 +168,9 @@
 		3B68EA7F1A52FFE3003F3715 /* EXPA-APP */ = {
 			isa = PBXGroup;
 			children = (
+				3B5753E51A5EA97D00C38BBA /* Objective-C-Swift-Bridge.h */,
 				3B68EA821A52FFE3003F3715 /* AppDelegate.swift */,
 				3B68EA841A52FFE3003F3715 /* ViewController.swift */,
-				3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */,
 				3B68EA861A52FFE3003F3715 /* Main.storyboard */,
 				3B68EA891A52FFE3003F3715 /* Images.xcassets */,
 				3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */,
@@ -149,6 +178,7 @@
 				3BBCCB801A5ABF6D00D8BA3D /* test.swift */,
 				3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */,
 				3B1C88071A5D321B00EAA492 /* todoitem.swift */,
+				3B5753E31A5EA95500C38BBA /* RootViewController.swift */,
 			);
 			path = "EXPA-APP";
 			sourceTree = "<group>";
@@ -156,6 +186,7 @@
 		3B68EA801A52FFE3003F3715 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B5753EC1A5EC88C00C38BBA /* SideMenuBackground.jpg */,
 				3B68EA811A52FFE3003F3715 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -309,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5753ED1A5EC88C00C38BBA /* SideMenuBackground.jpg in Resources */,
 				3B68EA881A52FFE3003F3715 /* Main.storyboard in Resources */,
 				3B68EA8D1A52FFE3003F3715 /* LaunchScreen.xib in Resources */,
 				3B68EA8A1A52FFE3003F3715 /* Images.xcassets in Resources */,
@@ -329,12 +361,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */,
+				3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */,
 				3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */,
 				3BBCCB811A5ABF6D00D8BA3D /* test.swift in Sources */,
 				3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */,
 				3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */,
 				3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */,
 				3B1C88031A5D1C0D00EAA492 /* CustomTableViewController.swift in Sources */,
+				3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */,
+				3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "EXPA-APP";
+				SWIFT_OBJC_BRIDGING_HEADER = "EXPA-APP/Objective-C-Swift-Bridge.h";
 			};
 			name = Debug;
 		};
@@ -483,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "EXPA-APP";
+				SWIFT_OBJC_BRIDGING_HEADER = "EXPA-APP/Objective-C-Swift-Bridge.h";
 			};
 			name = Release;
 		};
