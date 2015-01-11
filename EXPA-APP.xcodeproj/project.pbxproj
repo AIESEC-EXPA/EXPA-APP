@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B1C88031A5D1C0D00EAA492 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */; };
 		3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88071A5D321B00EAA492 /* todoitem.swift */; };
+		3B2DD9D61A62330700219EB1 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DD9D51A62330700219EB1 /* Tools.swift */; };
 		3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */; };
 		3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */; };
 		3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */; };
@@ -20,10 +20,10 @@
 		3B68EA8A1A52FFE3003F3715 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA891A52FFE3003F3715 /* Images.xcassets */; };
 		3B68EA8D1A52FFE3003F3715 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */; };
 		3B68EA991A52FFE3003F3715 /* EXPA_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA981A52FFE3003F3715 /* EXPA_APPTests.swift */; };
-		3BBCCB811A5ABF6D00D8BA3D /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBCCB801A5ABF6D00D8BA3D /* test.swift */; };
 		3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */; };
-		3BFBD7371A5AF8430042ABE0 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBCCB991A5AC82900D8BA3D /* SwiftHTTP.framework */; };
-		3BFBD7381A5AF8430042ABE0 /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBCCB991A5AC82900D8BA3D /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BD0E9761A60F70B00286EBF /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0E96F1A60F6F200286EBF /* SwiftHTTP.framework */; };
+		3BD0E9771A60F70B00286EBF /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0E96F1A60F6F200286EBF /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BD0E9AE1A6165D700286EBF /* MyProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,37 +34,37 @@
 			remoteGlobalIDString = 3B68EA7C1A52FFE3003F3715;
 			remoteInfo = "EXPA-APP";
 		};
-		3BBCCB981A5AC82900D8BA3D /* PBXContainerItemProxy */ = {
+		3BD0E96E1A60F6F200286EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */;
+			containerPortal = 3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BFD901619C8D8B500DD99B6;
 			remoteInfo = SwiftHTTP;
 		};
-		3BBCCB9A1A5AC82900D8BA3D /* PBXContainerItemProxy */ = {
+		3BD0E9701A60F6F200286EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */;
+			containerPortal = 3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BFD902119C8D8B500DD99B6;
 			remoteInfo = SwiftHTTPTests;
 		};
-		3BBCCB9C1A5AC82900D8BA3D /* PBXContainerItemProxy */ = {
+		3BD0E9721A60F6F200286EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */;
+			containerPortal = 3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D958025919E6EEEB003C8218;
 			remoteInfo = SwiftHTTPOSX;
 		};
-		3BBCCB9E1A5AC82900D8BA3D /* PBXContainerItemProxy */ = {
+		3BD0E9741A60F6F200286EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */;
+			containerPortal = 3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D958026319E6EEEB003C8218;
 			remoteInfo = SwiftHTTPOSXTests;
 		};
-		3BFBD7391A5AF8430042ABE0 /* PBXContainerItemProxy */ = {
+		3BD0E9781A60F70B00286EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */;
+			containerPortal = 3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 6BFD901519C8D8B500DD99B6;
 			remoteInfo = SwiftHTTP;
@@ -78,7 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3BFBD7381A5AF8430042ABE0 /* SwiftHTTP.framework in Embed Frameworks */,
+				3BD0E9771A60F70B00286EBF /* SwiftHTTP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,8 +86,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		3B1C88071A5D321B00EAA492 /* todoitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todoitem.swift; sourceTree = "<group>"; };
+		3B2DD9D51A62330700219EB1 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		3B2DD9DA1A62500A00219EB1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3B5753D71A5EA8F200C38BBA /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		3B5753D91A5EA8F200C38BBA /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -107,9 +108,9 @@
 		3B68EA921A52FFE3003F3715 /* EXPA-APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EXPA-APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B68EA971A52FFE3003F3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B68EA981A52FFE3003F3715 /* EXPA_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPA_APPTests.swift; sourceTree = "<group>"; };
-		3BBCCB801A5ABF6D00D8BA3D /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../Downloads/SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
 		3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "EXPA-APP/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../Desktop/Library/SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
+		3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BFBD7371A5AF8430042ABE0 /* SwiftHTTP.framework in Frameworks */,
+				3BD0E9761A60F70B00286EBF /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +148,10 @@
 		3B68EA741A52FFE3003F3715 = {
 			isa = PBXGroup;
 			children = (
+				3B2DD9DA1A62500A00219EB1 /* MyPlayground.playground */,
+				3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */,
 				3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */,
 				3B5753D61A5EA8F200C38BBA /* RESideMenu */,
-				3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */,
 				3B68EA7F1A52FFE3003F3715 /* EXPA-APP */,
 				3B68EA951A52FFE3003F3715 /* EXPA-APPTests */,
 				3B68EA7E1A52FFE3003F3715 /* Products */,
@@ -175,8 +177,8 @@
 				3B68EA891A52FFE3003F3715 /* Images.xcassets */,
 				3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */,
 				3B68EA801A52FFE3003F3715 /* Supporting Files */,
-				3BBCCB801A5ABF6D00D8BA3D /* test.swift */,
-				3B1C88021A5D1C0D00EAA492 /* CustomTableViewController.swift */,
+				3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */,
+				3B2DD9D51A62330700219EB1 /* Tools.swift */,
 				3B1C88071A5D321B00EAA492 /* todoitem.swift */,
 				3B5753E31A5EA95500C38BBA /* RootViewController.swift */,
 			);
@@ -209,13 +211,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3BBCCB921A5AC82800D8BA3D /* Products */ = {
+		3BD0E9681A60F6F200286EBF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BBCCB991A5AC82900D8BA3D /* SwiftHTTP.framework */,
-				3BBCCB9B1A5AC82900D8BA3D /* SwiftHTTPTests.xctest */,
-				3BBCCB9D1A5AC82900D8BA3D /* SwiftHTTPOSX.framework */,
-				3BBCCB9F1A5AC82900D8BA3D /* SwiftHTTPOSXTests.xctest */,
+				3BD0E96F1A60F6F200286EBF /* SwiftHTTP.framework */,
+				3BD0E9711A60F6F200286EBF /* SwiftHTTPTests.xctest */,
+				3BD0E9731A60F6F200286EBF /* SwiftHTTPOSX.framework */,
+				3BD0E9751A60F6F200286EBF /* SwiftHTTPOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +237,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3BFBD73A1A5AF8430042ABE0 /* PBXTargetDependency */,
+				3BD0E9791A60F70B00286EBF /* PBXTargetDependency */,
 			);
 			name = "EXPA-APP";
 			productName = "EXPA-APP";
@@ -292,8 +294,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3BBCCB921A5AC82800D8BA3D /* Products */;
-					ProjectRef = 3BBCCB911A5AC82800D8BA3D /* SwiftHTTP.xcodeproj */;
+					ProductGroup = 3BD0E9681A60F6F200286EBF /* Products */;
+					ProjectRef = 3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -305,32 +307,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3BBCCB991A5AC82900D8BA3D /* SwiftHTTP.framework */ = {
+		3BD0E96F1A60F6F200286EBF /* SwiftHTTP.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftHTTP.framework;
-			remoteRef = 3BBCCB981A5AC82900D8BA3D /* PBXContainerItemProxy */;
+			remoteRef = 3BD0E96E1A60F6F200286EBF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3BBCCB9B1A5AC82900D8BA3D /* SwiftHTTPTests.xctest */ = {
+		3BD0E9711A60F6F200286EBF /* SwiftHTTPTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SwiftHTTPTests.xctest;
-			remoteRef = 3BBCCB9A1A5AC82900D8BA3D /* PBXContainerItemProxy */;
+			remoteRef = 3BD0E9701A60F6F200286EBF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3BBCCB9D1A5AC82900D8BA3D /* SwiftHTTPOSX.framework */ = {
+		3BD0E9731A60F6F200286EBF /* SwiftHTTPOSX.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftHTTPOSX.framework;
-			remoteRef = 3BBCCB9C1A5AC82900D8BA3D /* PBXContainerItemProxy */;
+			remoteRef = 3BD0E9721A60F6F200286EBF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3BBCCB9F1A5AC82900D8BA3D /* SwiftHTTPOSXTests.xctest */ = {
+		3BD0E9751A60F6F200286EBF /* SwiftHTTPOSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SwiftHTTPOSXTests.xctest;
-			remoteRef = 3BBCCB9E1A5AC82900D8BA3D /* PBXContainerItemProxy */;
+			remoteRef = 3BD0E9741A60F6F200286EBF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -364,13 +366,13 @@
 				3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */,
 				3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */,
 				3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */,
-				3BBCCB811A5ABF6D00D8BA3D /* test.swift in Sources */,
 				3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */,
 				3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */,
 				3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */,
-				3B1C88031A5D1C0D00EAA492 /* CustomTableViewController.swift in Sources */,
 				3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */,
 				3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */,
+				3BD0E9AE1A6165D700286EBF /* MyProfileTableViewController.swift in Sources */,
+				3B2DD9D61A62330700219EB1 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,10 +392,10 @@
 			target = 3B68EA7C1A52FFE3003F3715 /* EXPA-APP */;
 			targetProxy = 3B68EA931A52FFE3003F3715 /* PBXContainerItemProxy */;
 		};
-		3BFBD73A1A5AF8430042ABE0 /* PBXTargetDependency */ = {
+		3BD0E9791A60F70B00286EBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftHTTP;
-			targetProxy = 3BFBD7391A5AF8430042ABE0 /* PBXContainerItemProxy */;
+			targetProxy = 3BD0E9781A60F70B00286EBF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
