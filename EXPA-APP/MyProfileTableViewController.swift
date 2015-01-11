@@ -21,6 +21,8 @@ class MyProfileTableViewController: UITableViewController {
     @IBOutlet weak var introductionLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var createdUpdateDateLabel: UILabel!
+    @IBOutlet weak var introductioinTableCell: UITableViewCell!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +31,7 @@ class MyProfileTableViewController: UITableViewController {
         var ID: String?
         var request = HTTPTask()
         //TODO: access_token/refresh_token will be stored in database or a file
-        let access_token = "8af2116dbb9deff995ff51c3c149575405cd4aa0e6e5b3e8f3834862e11246e0"
+        let access_token = "8f3895d2e88b72c486b71284d3468c6a4b31a17a65ae60ce602f586ff07527ba"
         request.GET("https://gis-api.aiesec.org:443/v1/current_person.json",
             parameters: ["access_token" : access_token],
             success: {(response: HTTPResponse) in
@@ -43,7 +45,7 @@ class MyProfileTableViewController: UITableViewController {
                     ID = json1["person"]["id"].stringValue!
                     
                     //STEP 2: get specified information that will be displayed on My Profile screen.
-                    request.GET("https://gis-api.aiesec.org:443/v1/people/" + ID! + ".json",
+                    request.GET("https://gis-api.aiesec.org:443/v1/people/\(ID!).json",
                         parameters: ["access_token":access_token],
                         success: {(response: HTTPResponse) in
                             let data2 = response.responseObject as? NSData
@@ -71,11 +73,32 @@ class MyProfileTableViewController: UITableViewController {
                                     
                                     self.full_nameOfPersonLabel.text = json2["full_name"].stringValue
                                     self.full_nameOfCommitteeLabel.text = json2["current_office"]["full_name"].stringValue
-                                    self.currentPositionNameLabel.text = json2["current_position"]["position_name"].stringValue
+                                    self.currentPositionNameLabel.text = json1["current_position"]["position_name"].stringValue
+                                    self.startEndDateLabel.text = Tools.oneDateToAnotherDate(oneDate: json1["current_position"]["start_date"].stringValue!, anotherDate: json1["current_position"]["end_date"].stringValue!)
                                     self.dateOfBirthLabel.text = json2["dob"].stringValue
-                                    self.introductionLabel.text = json2["introduction"].stringValue
+                                    
+                                    if json2["introduction"].stringValue == nil {
+                                        self.introductionLabel.text = "None"
+                                        self.introductionLabel.textColor = UIColor.lightGrayColor()
+                                        self.introductioinTableCell.accessoryType = UITableViewCellAccessoryType.None
+                                        self.introductioinTableCell.userInteractionEnabled = false
+                                    }
+                                    else {
+                                        self.introductionLabel.text = json2["introduction"].stringValue
+                                        self.introductionLabel.textColor = UIColor.blackColor()
+                                    }
+                                    
                                     self.phoneLabel.text = json2["contact_info"]["phone"].stringValue
                                     self.emailLabel.text = json2["email"].stringValue
+                                    
+                                    //TODO: all positions
+                                    
+                                    //Assemble the createdUpdatedDateLabel
+                                    var createdDate = Tools.convertRFC3339ToNSDate(RFC3339String: json2["created_at"].stringValue!)
+                                    var updatedDate = Tools.convertRFC3339ToNSDate(RFC3339String: json2["updated_at"].stringValue!)
+                                    var formatter = NSDateFormatter()
+                                    formatter.dateFormat = "yyyy-MM-dd"
+                                    self.createdUpdateDateLabel.text = "Created At \(formatter.stringFromDate(createdDate!)) | Updated At \(formatter.stringFromDate(updatedDate!))"
                                 })
                             }
                         }, //end of request 2's success closure
@@ -161,14 +184,20 @@ class MyProfileTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
+        if sender as? UITableViewCell == self.introductioinTableCell {
+            var dest = segue.destinationViewController as IntroductionViewController
+            dest.introductionText = introductionLabel.text
+        }
+        
     }
-    */
+    
 
 }

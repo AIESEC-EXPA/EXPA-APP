@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C88071A5D321B00EAA492 /* todoitem.swift */; };
 		3B2DD9D61A62330700219EB1 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DD9D51A62330700219EB1 /* Tools.swift */; };
 		3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */; };
 		3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */; };
 		3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */; };
 		3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753E31A5EA95500C38BBA /* RootViewController.swift */; };
 		3B5753ED1A5EC88C00C38BBA /* SideMenuBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B5753EC1A5EC88C00C38BBA /* SideMenuBackground.jpg */; };
+		3B6765C21A62A92D007245B3 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6765C11A62A92D007245B3 /* IntroductionViewController.swift */; };
 		3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA821A52FFE3003F3715 /* AppDelegate.swift */; };
-		3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA841A52FFE3003F3715 /* ViewController.swift */; };
 		3B68EA881A52FFE3003F3715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA861A52FFE3003F3715 /* Main.storyboard */; };
 		3B68EA8A1A52FFE3003F3715 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA891A52FFE3003F3715 /* Images.xcassets */; };
 		3B68EA8D1A52FFE3003F3715 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */; };
@@ -86,7 +85,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3B1C88071A5D321B00EAA492 /* todoitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todoitem.swift; sourceTree = "<group>"; };
 		3B2DD9D51A62330700219EB1 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		3B2DD9DA1A62500A00219EB1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3B5753D71A5EA8F200C38BBA /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
@@ -98,10 +96,10 @@
 		3B5753E31A5EA95500C38BBA /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3B5753E51A5EA97D00C38BBA /* Objective-C-Swift-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Swift-Bridge.h"; sourceTree = "<group>"; };
 		3B5753EC1A5EC88C00C38BBA /* SideMenuBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SideMenuBackground.jpg; sourceTree = "<group>"; };
+		3B6765C11A62A92D007245B3 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		3B68EA7D1A52FFE3003F3715 /* EXPA-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EXPA-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B68EA811A52FFE3003F3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B68EA821A52FFE3003F3715 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B68EA841A52FFE3003F3715 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B68EA871A52FFE3003F3715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B68EA891A52FFE3003F3715 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B68EA8C1A52FFE3003F3715 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -172,14 +170,13 @@
 			children = (
 				3B5753E51A5EA97D00C38BBA /* Objective-C-Swift-Bridge.h */,
 				3B68EA821A52FFE3003F3715 /* AppDelegate.swift */,
-				3B68EA841A52FFE3003F3715 /* ViewController.swift */,
 				3B68EA861A52FFE3003F3715 /* Main.storyboard */,
+				3B6765C11A62A92D007245B3 /* IntroductionViewController.swift */,
 				3B68EA891A52FFE3003F3715 /* Images.xcassets */,
 				3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */,
 				3B68EA801A52FFE3003F3715 /* Supporting Files */,
 				3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */,
 				3B2DD9D51A62330700219EB1 /* Tools.swift */,
-				3B1C88071A5D321B00EAA492 /* todoitem.swift */,
 				3B5753E31A5EA95500C38BBA /* RootViewController.swift */,
 			);
 			path = "EXPA-APP";
@@ -365,10 +362,9 @@
 			files = (
 				3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */,
 				3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */,
-				3B68EA851A52FFE3003F3715 /* ViewController.swift in Sources */,
-				3B1C88081A5D321B00EAA492 /* todoitem.swift in Sources */,
 				3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */,
 				3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */,
+				3B6765C21A62A92D007245B3 /* IntroductionViewController.swift in Sources */,
 				3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */,
 				3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */,
 				3BD0E9AE1A6165D700286EBF /* MyProfileTableViewController.swift in Sources */,

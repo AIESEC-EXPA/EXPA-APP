@@ -22,5 +22,25 @@ class Tools {
         })
         return Response
     }
+    
+    //Convert RFC3339 datetime string to NSDate object
+    class func convertRFC3339ToNSDate(#RFC3339String: String) -> NSDate? {
+        var RFC3339dateformatter = NSDateFormatter()
+        RFC3339dateformatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        RFC3339dateformatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        RFC3339dateformatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+        
+        var date = RFC3339dateformatter.dateFromString(RFC3339String)
+        return date?
+    }
+    
+    class func oneDateToAnotherDate(#oneDate: String, anotherDate: String) -> String {
+        var date1 = convertRFC3339ToNSDate(RFC3339String: oneDate)
+        var date2 = convertRFC3339ToNSDate(RFC3339String: anotherDate)
+        
+        var formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.stringFromDate(date1!) + " -- " + formatter.stringFromDate(date2!)
+    }
 }
 
