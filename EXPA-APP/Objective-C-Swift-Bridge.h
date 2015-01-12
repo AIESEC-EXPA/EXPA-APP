@@ -10,5 +10,6 @@
 #define EXPA_APP_Objective_C_Swift_Bridge_h
 
 #import "RESideMenu.h"
+#import "FMDB.h"
 
 #endif

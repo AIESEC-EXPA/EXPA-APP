@@ -40,7 +40,23 @@ class Tools {
         
         var formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.stringFromDate(date1!) + " -- " + formatter.stringFromDate(date2!)
+        return formatter.stringFromDate(date1!) + " ~ " + formatter.stringFromDate(date2!)
     }
+    
+    class func getFromInfo_plist(#forKey: String) -> String? {
+        var File = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
+        var dict = NSMutableDictionary(contentsOfFile: File!)
+        var str = dict?.objectForKey(forKey) as? String
+        return str
+    }
+    
+    class func saveToInfo_plist(#forKey: String, #value: AnyObject) -> Void {
+        var File = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
+        var dict = NSMutableDictionary(contentsOfFile: File!)
+        dict?.setObject("ddddddd", forKey: "access_token")
+        dict?.writeToFile(File!, atomically: true)
+    }
+    
+    class func SQLiteExecuteUpdate(#sqliteFileName: String, #tableName: String, #query: String
 }
 

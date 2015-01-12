@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3B2DD9D61A62330700219EB1 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2DD9D51A62330700219EB1 /* Tools.swift */; };
+		3B43C9631A63B2C80066D0D1 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C9591A63B2C80066D0D1 /* FMDatabase.m */; };
+		3B43C9641A63B2C80066D0D1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C95B1A63B2C80066D0D1 /* FMDatabaseAdditions.m */; };
+		3B43C9651A63B2C80066D0D1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C95D1A63B2C80066D0D1 /* FMDatabasePool.m */; };
+		3B43C9661A63B2C80066D0D1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C95F1A63B2C80066D0D1 /* FMDatabaseQueue.m */; };
+		3B43C9671A63B2C80066D0D1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C9621A63B2C80066D0D1 /* FMResultSet.m */; };
+		3B43C96A1A63B3D00066D0D1 /* FMDatabaseVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C9691A63B3D00066D0D1 /* FMDatabaseVariadic.swift */; };
 		3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */; };
 		3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */; };
 		3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */; };
@@ -87,6 +93,18 @@
 /* Begin PBXFileReference section */
 		3B2DD9D51A62330700219EB1 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		3B2DD9DA1A62500A00219EB1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		3B43C9581A63B2C80066D0D1 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		3B43C9591A63B2C80066D0D1 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		3B43C95A1A63B2C80066D0D1 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		3B43C95B1A63B2C80066D0D1 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		3B43C95C1A63B2C80066D0D1 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		3B43C95D1A63B2C80066D0D1 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		3B43C95E1A63B2C80066D0D1 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		3B43C95F1A63B2C80066D0D1 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		3B43C9601A63B2C80066D0D1 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		3B43C9611A63B2C80066D0D1 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		3B43C9621A63B2C80066D0D1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		3B43C9691A63B3D00066D0D1 /* FMDatabaseVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseVariadic.swift; sourceTree = "<group>"; };
 		3B5753D71A5EA8F200C38BBA /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		3B5753D91A5EA8F200C38BBA /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -130,6 +148,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B43C9541A63B2960066D0D1 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				3B43C9681A63B3D00066D0D1 /* Swift extensions */,
+				3B43C9581A63B2C80066D0D1 /* FMDatabase.h */,
+				3B43C9591A63B2C80066D0D1 /* FMDatabase.m */,
+				3B43C95A1A63B2C80066D0D1 /* FMDatabaseAdditions.h */,
+				3B43C95B1A63B2C80066D0D1 /* FMDatabaseAdditions.m */,
+				3B43C95C1A63B2C80066D0D1 /* FMDatabasePool.h */,
+				3B43C95D1A63B2C80066D0D1 /* FMDatabasePool.m */,
+				3B43C95E1A63B2C80066D0D1 /* FMDatabaseQueue.h */,
+				3B43C95F1A63B2C80066D0D1 /* FMDatabaseQueue.m */,
+				3B43C9601A63B2C80066D0D1 /* FMDB.h */,
+				3B43C9611A63B2C80066D0D1 /* FMResultSet.h */,
+				3B43C9621A63B2C80066D0D1 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		3B43C9681A63B3D00066D0D1 /* Swift extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B43C9691A63B3D00066D0D1 /* FMDatabaseVariadic.swift */,
+			);
+			path = "Swift extensions";
+			sourceTree = "<group>";
+		};
 		3B5753D61A5EA8F200C38BBA /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +191,7 @@
 		3B68EA741A52FFE3003F3715 = {
 			isa = PBXGroup;
 			children = (
+				3B43C9541A63B2960066D0D1 /* FMDB */,
 				3B2DD9DA1A62500A00219EB1 /* MyPlayground.playground */,
 				3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */,
 				3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */,
@@ -361,11 +407,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */,
+				3B43C9651A63B2C80066D0D1 /* FMDatabasePool.m in Sources */,
+				3B43C96A1A63B3D00066D0D1 /* FMDatabaseVariadic.swift in Sources */,
+				3B43C9671A63B2C80066D0D1 /* FMResultSet.m in Sources */,
 				3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */,
 				3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */,
+				3B43C9661A63B2C80066D0D1 /* FMDatabaseQueue.m in Sources */,
+				3B43C9631A63B2C80066D0D1 /* FMDatabase.m in Sources */,
 				3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */,
 				3B6765C21A62A92D007245B3 /* IntroductionViewController.swift in Sources */,
 				3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */,
+				3B43C9641A63B2C80066D0D1 /* FMDatabaseAdditions.m in Sources */,
 				3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */,
 				3BD0E9AE1A6165D700286EBF /* MyProfileTableViewController.swift in Sources */,
 				3B2DD9D61A62330700219EB1 /* Tools.swift in Sources */,
