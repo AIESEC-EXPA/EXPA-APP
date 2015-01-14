@@ -10,6 +10,8 @@ import UIKit
 import SwiftHTTP
 
 class MyProfileTableViewController: UITableViewController {
+    
+    var ID: String?
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var genderImageView: UIImageView!
@@ -23,17 +25,21 @@ class MyProfileTableViewController: UITableViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var createdUpdateDateLabel: UILabel!
     @IBOutlet weak var introductioinTableCell: UITableViewCell!
+    @IBOutlet weak var seemoreTableCell: UITableViewCell!
+    @IBOutlet weak var seemoreLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Send a HTTP request to get personal information, this will be divided to 2 steps.
         //STEP 1: get ID of current user by access token
-        var ID: String?
+        
         var request = HTTPTask()
         //TODO: access_token/refresh_token will be stored in database or a file
-        let access_token = "84753eeda8cab437d19ef88443fbdaef741beb224b1ca6cf0f9e4c8ed8b0f44e"
+        let access_token = "d6bb9effba310fc7eac98244a4dac9567aa7acd541004ceb93a21398682668b1"
         
         if let IDinStorage = Tools.getFromInfo_plist(forKey: "user_ID") {
+            self.ID = IDinStorage
+            
             let documentsFolder = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
             let path = documentsFolder.stringByAppendingPathComponent("EXPA.sqlite")
             
@@ -85,6 +91,10 @@ class MyProfileTableViewController: UITableViewController {
                     var formatter = NSDateFormatter()
                     formatter.dateFormat = "yyyy-MM-dd"
                     self.createdUpdateDateLabel.text = "Created At \(formatter.stringFromDate(createdDate!)) | Updated At \(formatter.stringFromDate(updatedDate!))"
+                    
+                    self.seemoreLabel.textColor = UIColor.blackColor()
+                    self.seemoreTableCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                    self.seemoreTableCell.userInteractionEnabled = true
                 }
             }
         }
@@ -94,10 +104,10 @@ class MyProfileTableViewController: UITableViewController {
             success: {(response: HTTPResponse) in
                 if let data1 = response.responseObject as? NSData {
                     let json1 = JSON(data: data1)
-                    ID = json1["person"]["id"].stringValue!
+                    self.ID = json1["person"]["id"].stringValue
                     
                     //STEP 2: get specified information that will be displayed on My Profile screen.
-                    request.GET("https://gis-api.aiesec.org:443/v1/people/\(ID!).json",
+                    request.GET("https://gis-api.aiesec.org:443/v1/people/\(self.ID!).json",
                         parameters: ["access_token":access_token],
                         success: {(response: HTTPResponse) in
                             if let data2 = response.responseObject as? NSData
@@ -108,7 +118,7 @@ class MyProfileTableViewController: UITableViewController {
                                 dispatch_async(dispatch_get_main_queue(), {
                                     let documentsFolder = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
                                     
-                                    var profileImgURL = json2["profile_photo_urls"]["original"].stringValue!
+                                    var profileImgURL = json2["profile_photo_urls"]["original"].stringValue
                                     if let profileImg = NSData(contentsOfURL: NSURL(string: profileImgURL)!) {
                                         self.profileImageView.image = UIImage(data: profileImg)
                                         var path = documentsFolder.stringByAppendingPathComponent("profileImage")
@@ -118,7 +128,7 @@ class MyProfileTableViewController: UITableViewController {
                                                 println("create dir failed: \(e.description)")
                                             }
                                         }
-                                        path = documentsFolder.stringByAppendingPathComponent("profileImage/\(ID!).jpg")
+                                        path = documentsFolder.stringByAppendingPathComponent("profileImage/\(self.ID!).jpg")
                                         if !UIImageJPEGRepresentation(self.profileImageView.image, 1).writeToFile(path, options: nil, error: &error) {
                                             if let e = error {
                                                 println("profileImage save failed:\(e.description)")
@@ -137,10 +147,10 @@ class MyProfileTableViewController: UITableViewController {
                                     self.full_nameOfPersonLabel.text = json2["full_name"].stringValue
                                     self.full_nameOfCommitteeLabel.text = json2["current_office"]["full_name"].stringValue
                                     self.currentPositionNameLabel.text = json1["current_position"]["position_name"].stringValue
-                                    self.startEndDateLabel.text = Tools.oneDateToAnotherDate(oneDate: json1["current_position"]["start_date"].stringValue!, anotherDate: json1["current_position"]["end_date"].stringValue!)
+                                    self.startEndDateLabel.text = Tools.oneDateToAnotherDate(oneDate: json1["current_position"]["start_date"].stringValue, anotherDate: json1["current_position"]["end_date"].stringValue)
                                     self.dateOfBirthLabel.text = json2["dob"].stringValue
                                     
-                                    if json2["introduction"].stringValue == nil {
+                                    if json2["introduction"].stringValue == "" {
                                         self.introductionLabel.text = "None"
                                         self.introductionLabel.textColor = UIColor.lightGrayColor()
                                         self.introductioinTableCell.accessoryType = UITableViewCellAccessoryType.None
@@ -149,16 +159,17 @@ class MyProfileTableViewController: UITableViewController {
                                     else {
                                         self.introductionLabel.text = json2["introduction"].stringValue
                                         self.introductionLabel.textColor = UIColor.blackColor()
+                                        self.introductioinTableCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                                        self.introductioinTableCell.userInteractionEnabled = true
                                     }
                                     
                                     self.phoneLabel.text = json2["contact_info"]["phone"].stringValue
                                     self.emailLabel.text = json2["email"].stringValue
                                     
-                                    //TODO: all positions
                                     
                                     //Assemble the createdUpdatedDateLabel
-                                    var createdDate = Tools.convertRFC3339ToNSDate(RFC3339String: json2["created_at"].stringValue!)
-                                    var updatedDate = Tools.convertRFC3339ToNSDate(RFC3339String: json2["updated_at"].stringValue!)
+                                    var createdDate = Tools.convertRFC3339ToNSDate(RFC3339String: json2["created_at"].stringValue)
+                                    var updatedDate = Tools.convertRFC3339ToNSDate(RFC3339String: json2["updated_at"].stringValue)
                                     var formatter = NSDateFormatter()
                                     formatter.dateFormat = "yyyy-MM-dd"
                                     self.createdUpdateDateLabel.text = "Created At \(formatter.stringFromDate(createdDate!)) | Updated At \(formatter.stringFromDate(updatedDate!))"
@@ -172,21 +183,45 @@ class MyProfileTableViewController: UITableViewController {
                                         println("database open failed:\(database.lastErrorMessage())")
                                     }
                                     else {
-                                        //create table if not exists
+                                        //create persons' table if not exists
                                         var query = "CREATE TABLE IF NOT EXISTS persons(ID INTEGER PRIMARY KEY, first_name TEXT, last_name TEXT, full_name TEXT, dob TEXT, introduction TEXT, gender TEXT, email TEXT, phone TEXT, current_position_name TEXT, current_committee_name TEXT, start_date TEXT, end_date TEXT, created_at TEXT, updated_at TEXT)"
                                         if !database.executeUpdate(query, withArgumentsInArray: nil) {
-                                            println("database open failed:\(database.lastErrorMessage())")
+                                            println("database persons create failed:\(database.lastErrorMessage())")
                                         }
                                         
                                         query = "DELETE FROM persons WHERE ID=?"
-                                        database.executeUpdate(query, ID!)
+                                        database.executeUpdate(query, self.ID!)
                                         
-                                        //insert
-                                        query = "INSERT INTO persons(ID, first_name, last_name, full_name, dob, introduction, gender, email, phone, current_position_name, current_committee_name, start_date, end_date, created_at, updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-                                        if !database.executeUpdate(query, ID!, json2["first_name"].stringValue!, json2["last_name"].stringValue!, json2["full_name"].stringValue!, json2["dob"].stringValue!, self.introductionLabel.text!, json2["gender"].stringValue!, json2["email"].stringValue!, json2["contact_info"]["phone"].stringValue!, json2["email"].stringValue!, json1["current_position"]["position_name"].stringValue!, json2["current_office"]["full_name"].stringValue!, json1["current_position"]["start_date"].stringValue!, json1["current_position"]["end_date"].stringValue!, json2["created_at"].stringValue!, json2["updated_at"].stringValue!) {
-                                            println("insert failed: \(database.lastErrorMessage())")
+                                        //insert into persons' table
+                                        query = "INSERT INTO persons(ID, first_name, last_name, full_name, dob, introduction, gender, email, phone, current_position_name, current_committee_name, start_date, end_date, created_at, updated_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+                                        if !database.executeUpdate(query, self.ID!, json2["first_name"].stringValue, json2["last_name"].stringValue, self.full_nameOfPersonLabel.text!, self.dateOfBirthLabel.text!, self.introductionLabel.text!, gender, self.emailLabel.text!, self.phoneLabel.text!, self.currentPositionNameLabel.text!, self.full_nameOfCommitteeLabel.text!, json1["current_position"]["start_date"].stringValue, json1["current_position"]["end_date"].stringValue, json2["created_at"].stringValue, json2["updated_at"].stringValue) {
+                                            println("insert persons failed: \(database.lastErrorMessage())")
                                         }
-                                    }
+                                        
+                                        // create positions' table is not exists
+                                        query = "CREATE TABLE IF NOT EXISTS positions(user_ID INTEGER, position_ID INTEGER PRIMARY KEY, position_name TEXT, start_date TEXT, end_date TEXT, team_ID INTEGER, team_title TEXT)"
+                                        if !database.executeUpdate(query) {
+                                            println("database positions create failed:\(database.lastErrorMessage())")
+                                        }
+                                        
+                                        query = "DELETE FROM positions WHERE user_ID=?"
+                                        database.executeUpdate(query, self.ID!)
+                                        
+                                        //insert into positions' table
+                                        query = "INSERT INTO positions(user_ID, position_ID, position_name, start_date, end_date, team_ID, team_title) VALUES(?,?,?,?,?,?,?)"
+                                        
+                                        var positions = json2["positions"]
+                                        for(index: String, subjson: JSON) in positions {
+                                            if !database.executeUpdate(query, self.ID!, subjson["id"].stringValue, subjson["position_name"].stringValue, subjson["start_date"].stringValue, subjson["end_date"].stringValue, subjson["team"]["id"].stringValue, subjson["team"]["title"].stringValue) {
+                                                println("insert positions failed: \(database.lastErrorMessage())")
+                                            }
+                                        }
+                                        self.seemoreLabel.textColor = UIColor.blackColor()
+                                        self.seemoreTableCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+                                        self.seemoreTableCell.userInteractionEnabled = true
+                                        
+                                    } // end if database opened successfully
+                                    database.close()
                                     
                                 }) //end of dispatch main queue
                             }
@@ -287,6 +322,10 @@ class MyProfileTableViewController: UITableViewController {
         if sender as? UITableViewCell == self.introductioinTableCell {
             var dest = segue.destinationViewController as IntroductionViewController
             dest.introductionText = introductionLabel.text
+        }
+        else if sender as? UITableViewCell == self.seemoreTableCell {
+            var dest = segue.destinationViewController as AllPositionsTableViewController
+            dest.ID = self.ID
         }
         
     }

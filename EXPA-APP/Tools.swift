@@ -57,6 +57,10 @@ class Tools {
         dict?.writeToFile(File!, atomically: true)
     }
     
+    class func getFullSubDocumentsPath(#subDir: String) -> String {
+        var documents = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        return documents.stringByAppendingPathComponent(subDir)
+    }
     //class func SQLiteExecuteUpdate(#sqliteFileName: String, #tableName: String, #query: String
 }
 

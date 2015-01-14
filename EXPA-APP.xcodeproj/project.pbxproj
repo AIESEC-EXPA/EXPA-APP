@@ -26,7 +26,10 @@
 		3B68EA8A1A52FFE3003F3715 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA891A52FFE3003F3715 /* Images.xcassets */; };
 		3B68EA8D1A52FFE3003F3715 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */; };
 		3B68EA991A52FFE3003F3715 /* EXPA_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B68EA981A52FFE3003F3715 /* EXPA_APPTests.swift */; };
-		3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */; };
+		3B6F6DDE1A663D5100A9FFFA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F6DDD1A663D5100A9FFFA /* SwiftyJSON.swift */; };
+		3B6F6DE01A66501400A9FFFA /* AllPositionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F6DDF1A66501400A9FFFA /* AllPositionsTableViewController.swift */; };
+		3B6F6DE31A66594C00A9FFFA /* AllPositionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F6DE11A66594C00A9FFFA /* AllPositionsTableViewCell.swift */; };
+		3B6F6DE41A66594C00A9FFFA /* AllPositionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6F6DE21A66594C00A9FFFA /* AllPositionsTableViewCell.xib */; };
 		3BD0E9761A60F70B00286EBF /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0E96F1A60F6F200286EBF /* SwiftHTTP.framework */; };
 		3BD0E9771A60F70B00286EBF /* SwiftHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD0E96F1A60F6F200286EBF /* SwiftHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3BD0E9AE1A6165D700286EBF /* MyProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */; };
@@ -126,7 +129,10 @@
 		3B68EA921A52FFE3003F3715 /* EXPA-APPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EXPA-APPTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B68EA971A52FFE3003F3715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B68EA981A52FFE3003F3715 /* EXPA_APPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPA_APPTests.swift; sourceTree = "<group>"; };
-		3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "EXPA-APP/SwiftyJSON.swift"; sourceTree = "<group>"; };
+		3B6F6DDD1A663D5100A9FFFA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		3B6F6DDF1A66501400A9FFFA /* AllPositionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPositionsTableViewController.swift; sourceTree = "<group>"; };
+		3B6F6DE11A66594C00A9FFFA /* AllPositionsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPositionsTableViewCell.swift; sourceTree = "<group>"; };
+		3B6F6DE21A66594C00A9FFFA /* AllPositionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AllPositionsTableViewCell.xib; sourceTree = "<group>"; };
 		3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = "../../Desktop/Library/SwiftHTTP-master/SwiftHTTP.xcodeproj"; sourceTree = "<group>"; };
 		3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,11 +200,11 @@
 		3B68EA741A52FFE3003F3715 = {
 			isa = PBXGroup;
 			children = (
+				3B6F6DDD1A663D5100A9FFFA /* SwiftyJSON.swift */,
 				3B43C9991A6408080066D0D1 /* libsqlite3.0.dylib */,
 				3B43C9541A63B2960066D0D1 /* FMDB */,
 				3B2DD9DA1A62500A00219EB1 /* MyPlayground.playground */,
 				3BD0E9671A60F6F200286EBF /* SwiftHTTP.xcodeproj */,
-				3BCC33E71A5AEA6E004F97A7 /* SwiftyJSON.swift */,
 				3B5753D61A5EA8F200C38BBA /* RESideMenu */,
 				3B68EA7F1A52FFE3003F3715 /* EXPA-APP */,
 				3B68EA951A52FFE3003F3715 /* EXPA-APPTests */,
@@ -221,6 +227,9 @@
 				3B5753E51A5EA97D00C38BBA /* Objective-C-Swift-Bridge.h */,
 				3B68EA821A52FFE3003F3715 /* AppDelegate.swift */,
 				3B68EA861A52FFE3003F3715 /* Main.storyboard */,
+				3B6F6DE11A66594C00A9FFFA /* AllPositionsTableViewCell.swift */,
+				3B6F6DE21A66594C00A9FFFA /* AllPositionsTableViewCell.xib */,
+				3B6F6DDF1A66501400A9FFFA /* AllPositionsTableViewController.swift */,
 				3B6765C11A62A92D007245B3 /* IntroductionViewController.swift */,
 				3B68EA891A52FFE3003F3715 /* Images.xcassets */,
 				3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */,
@@ -390,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5753ED1A5EC88C00C38BBA /* SideMenuBackground.jpg in Resources */,
+				3B6F6DE41A66594C00A9FFFA /* AllPositionsTableViewCell.xib in Resources */,
 				3B68EA881A52FFE3003F3715 /* Main.storyboard in Resources */,
 				3B68EA8D1A52FFE3003F3715 /* LaunchScreen.xib in Resources */,
 				3B68EA8A1A52FFE3003F3715 /* Images.xcassets in Resources */,
@@ -413,12 +423,14 @@
 				3B5753E41A5EA95500C38BBA /* RootViewController.swift in Sources */,
 				3B43C9651A63B2C80066D0D1 /* FMDatabasePool.m in Sources */,
 				3B43C96A1A63B3D00066D0D1 /* FMDatabaseVariadic.swift in Sources */,
+				3B6F6DE31A66594C00A9FFFA /* AllPositionsTableViewCell.swift in Sources */,
+				3B6F6DDE1A663D5100A9FFFA /* SwiftyJSON.swift in Sources */,
 				3B43C9671A63B2C80066D0D1 /* FMResultSet.m in Sources */,
 				3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */,
 				3B68EA831A52FFE3003F3715 /* AppDelegate.swift in Sources */,
 				3B43C9661A63B2C80066D0D1 /* FMDatabaseQueue.m in Sources */,
+				3B6F6DE01A66501400A9FFFA /* AllPositionsTableViewController.swift in Sources */,
 				3B43C9631A63B2C80066D0D1 /* FMDatabase.m in Sources */,
-				3BCC33E81A5AEA6E004F97A7 /* SwiftyJSON.swift in Sources */,
 				3B6765C21A62A92D007245B3 /* IntroductionViewController.swift in Sources */,
 				3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */,
 				3B43C9641A63B2C80066D0D1 /* FMDatabaseAdditions.m in Sources */,
