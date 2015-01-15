@@ -15,6 +15,8 @@
 		3B43C9671A63B2C80066D0D1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C9621A63B2C80066D0D1 /* FMResultSet.m */; };
 		3B43C96A1A63B3D00066D0D1 /* FMDatabaseVariadic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43C9691A63B3D00066D0D1 /* FMDatabaseVariadic.swift */; };
 		3B43C99A1A6408080066D0D1 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B43C9991A6408080066D0D1 /* libsqlite3.0.dylib */; };
+		3B49F01A1A678ED000AC0CEE /* ProgrammesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B49F0181A678ED000AC0CEE /* ProgrammesCollectionViewCell.swift */; };
+		3B49F01B1A678ED000AC0CEE /* ProgrammesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B49F0191A678ED000AC0CEE /* ProgrammesCollectionViewCell.xib */; };
 		3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */; };
 		3B5753DE1A5EA8F200C38BBA /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DA1A5EA8F200C38BBA /* RESideMenu.m */; };
 		3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5753DC1A5EA8F200C38BBA /* UIViewController+RESideMenu.m */; };
@@ -110,6 +112,8 @@
 		3B43C9621A63B2C80066D0D1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		3B43C9691A63B3D00066D0D1 /* FMDatabaseVariadic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseVariadic.swift; sourceTree = "<group>"; };
 		3B43C9991A6408080066D0D1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		3B49F0181A678ED000AC0CEE /* ProgrammesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammesCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B49F0191A678ED000AC0CEE /* ProgrammesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgrammesCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B5753D71A5EA8F200C38BBA /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3B5753D81A5EA8F200C38BBA /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		3B5753D91A5EA8F200C38BBA /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				3B68EA8B1A52FFE3003F3715 /* LaunchScreen.xib */,
 				3B68EA801A52FFE3003F3715 /* Supporting Files */,
 				3BD0E9AD1A6165D700286EBF /* MyProfileTableViewController.swift */,
+				3B49F0181A678ED000AC0CEE /* ProgrammesCollectionViewCell.swift */,
+				3B49F0191A678ED000AC0CEE /* ProgrammesCollectionViewCell.xib */,
 				3B2DD9D51A62330700219EB1 /* Tools.swift */,
 				3B5753E31A5EA95500C38BBA /* RootViewController.swift */,
 			);
@@ -402,6 +408,7 @@
 				3B6F6DE41A66594C00A9FFFA /* AllPositionsTableViewCell.xib in Resources */,
 				3B68EA881A52FFE3003F3715 /* Main.storyboard in Resources */,
 				3B68EA8D1A52FFE3003F3715 /* LaunchScreen.xib in Resources */,
+				3B49F01B1A678ED000AC0CEE /* ProgrammesCollectionViewCell.xib in Resources */,
 				3B68EA8A1A52FFE3003F3715 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +442,7 @@
 				3B5753DD1A5EA8F200C38BBA /* RECommonFunctions.m in Sources */,
 				3B43C9641A63B2C80066D0D1 /* FMDatabaseAdditions.m in Sources */,
 				3B5753DF1A5EA8F200C38BBA /* UIViewController+RESideMenu.m in Sources */,
+				3B49F01A1A678ED000AC0CEE /* ProgrammesCollectionViewCell.swift in Sources */,
 				3BD0E9AE1A6165D700286EBF /* MyProfileTableViewController.swift in Sources */,
 				3B2DD9D61A62330700219EB1 /* Tools.swift in Sources */,
 			);

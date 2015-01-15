@@ -9,9 +9,10 @@
 import UIKit
 import SwiftHTTP
 
-class MyProfileTableViewController: UITableViewController {
+class MyProfileTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var ID: String?
+    var programmesDataResource: NSMutableArray?
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var genderImageView: UIImageView!
@@ -27,15 +28,16 @@ class MyProfileTableViewController: UITableViewController {
     @IBOutlet weak var introductioinTableCell: UITableViewCell!
     @IBOutlet weak var seemoreTableCell: UITableViewCell!
     @IBOutlet weak var seemoreLabel: UILabel!
+    @IBOutlet weak var programmesCollectionView: UICollectionView!
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         
         //Send a HTTP request to get personal information, this will be divided to 2 steps.
         //STEP 1: get ID of current user by access token
         
         var request = HTTPTask()
         //TODO: access_token/refresh_token will be stored in database or a file
-        let access_token = "d6bb9effba310fc7eac98244a4dac9567aa7acd541004ceb93a21398682668b1"
+        let access_token = "11bd9be64252aabc9f77144f10f298e1d140d466eb436ca8f45c02a9d06aa915"
         
         if let IDinStorage = Tools.getFromInfo_plist(forKey: "user_ID") {
             self.ID = IDinStorage
@@ -96,7 +98,16 @@ class MyProfileTableViewController: UITableViewController {
                     self.seemoreTableCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
                     self.seemoreTableCell.userInteractionEnabled = true
                 }
+                if let da = database.executeQuery("SELECT * FROM programmes WHERE user_ID=?", IDinStorage) {
+                    var array = NSMutableArray()
+                    while da.next() {
+                        array.addObject(da.stringForColumn("programme_id"))
+                    }
+                    self.programmesDataResource = array
+                    self.programmesCollectionView.reloadData()
+                }
             }
+            database.close()
         }
         
         request.GET("https://gis-api.aiesec.org:443/v1/current_person.json",
@@ -220,6 +231,34 @@ class MyProfileTableViewController: UITableViewController {
                                         self.seemoreTableCell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
                                         self.seemoreTableCell.userInteractionEnabled = true
                                         
+                                        //create programmes' table if not exists
+                                        query = "CREATE TABLE IF NOT EXISTS programmes(user_ID INTEGER, programme_ID INTEGER, short_name TEXT)"
+                                        if !database.executeUpdate(query) {
+                                            println("database programmes create failed:\(database.lastErrorMessage())")
+                                        }
+                                        
+                                        query = "DELETE FROM programmes WHERE user_ID=?"
+                                        database.executeUpdate(query, self.ID!)
+                                        
+                                        //insert into programmes' table
+                                        query = "INSERT INTO programmes(user_ID, programme_ID, short_name) VALUES(?,?,?)"
+                                        
+                                        var programmes = json2["programmes"]
+                                        for (index: String, subjson: JSON) in programmes {
+                                            if !database.executeUpdate(query, self.ID!, subjson["id"].stringValue, subjson["short_name"].stringValue) {
+                                                println("insert programmes failed: \(database.lastErrorMessage())")
+                                            }
+                                        }
+                                        
+                                        if let d = database.executeQuery("SELECT * FROM programmes WHERE user_ID=?", self.ID!) {
+                                            var array = NSMutableArray()
+                                            while d.next() {
+                                                array.addObject(d.stringForColumn("programme_ID"))
+                                            }
+                                            self.programmesDataResource = array
+                                            self.programmesCollectionView.reloadData()
+                                        }
+                                        
                                     } // end if database opened successfully
                                     database.close()
                                     
@@ -330,5 +369,49 @@ class MyProfileTableViewController: UITableViewController {
         
     }
     
-
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if self.programmesDataResource != nil {
+            return self.programmesDataResource!.count
+        }
+        return 0
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        collectionView.registerNib(UINib(nibName: "ProgrammesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProgrammeCell")
+        var cell = collectionView.dequeueReusableCellWithReuseIdentifier("ProgrammeCell", forIndexPath: indexPath) as ProgrammesCollectionViewCell
+        
+        if let data = self.programmesDataResource {
+            var text = data.objectAtIndex(indexPath.row) as String
+            
+            switch text {
+            case "1":
+                cell.programmeShortNameLabel.text = "GCDP"
+                cell.programmeShortNameLabel.textColor = UIColor.whiteColor()
+                cell.programmeShortNameLabel.backgroundColor = UIColor(red: 226.0/255, green: 132.0/255, blue: 93.0/255, alpha: 1.0)
+                break
+            case "2":
+                cell.programmeShortNameLabel.text = "GIP"
+                cell.programmeShortNameLabel.textColor = UIColor.whiteColor()
+                cell.programmeShortNameLabel.backgroundColor = UIColor(red: 238.0/255, green: 208.0/255, blue: 107.0/255, alpha: 1.0)
+                break
+            case "3":
+                cell.programmeShortNameLabel.text = "TMP"
+                cell.programmeShortNameLabel.textColor = UIColor.whiteColor()
+                cell.programmeShortNameLabel.backgroundColor = UIColor(red: 167.0/255, green: 217.0/255, blue: 172.0/255, alpha: 1.0)
+                break
+            case "4":
+                cell.programmeShortNameLabel.text = "TLP"
+                cell.programmeShortNameLabel.textColor = UIColor.whiteColor()
+                cell.programmeShortNameLabel.backgroundColor = UIColor(red: 143.0/255, green: 203.0/255, blue: 214.0/255, alpha: 1.0)
+                break
+            default:
+                break
+            } // end of switch
+        } // end of if
+        return cell
+    }
 }

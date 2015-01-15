@@ -173,7 +173,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tMb-6K-BuD">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProgrammeCell" id="tMb-6K-BuD" customClass="ProgrammesCollectionViewCell" customModule="EXPA_APP" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -222,6 +222,10 @@
                                                             <include reference="dkH-NF-iuj"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="MM9-H2-mTP" id="iWr-jv-WTd"/>
+                                                        <outlet property="delegate" destination="MM9-H2-mTP" id="ini-Q3-9N4"/>
+                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
@@ -431,9 +435,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="23" y="0.0" width="536" height="65"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -752,6 +753,7 @@
                         <outlet property="introductionLabel" destination="3Zt-UW-5Qx" id="G6A-IL-cbS"/>
                         <outlet property="phoneLabel" destination="ABL-XI-Ab1" id="nGx-7D-xSj"/>
                         <outlet property="profileImageView" destination="OxB-Fl-vCu" id="KHe-4C-pNV"/>
+                        <outlet property="programmesCollectionView" destination="GXJ-Hw-M4n" id="bKv-TR-331"/>
                         <outlet property="seemoreLabel" destination="EJx-7j-91o" id="N5G-FN-fCS"/>
                         <outlet property="seemoreTableCell" destination="S5L-cw-qaP" id="0n3-jo-Ozg"/>
                         <outlet property="startEndDateLabel" destination="DE3-bc-E7o" id="Kn0-H3-9LY"/>
@@ -826,6 +828,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="AllPositionsTableViewController" title="AllPositionsTableViewController" id="Bto-h6-Pme" customClass="AllPositionsTableViewController" customModule="EXPA_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2b6-ig-Seq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
